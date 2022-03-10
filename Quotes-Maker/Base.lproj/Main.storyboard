@@ -18,31 +18,79 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="명언생성기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USu-6g-Ffz">
                                 <rect key="frame" x="24" y="68" width="366" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="koD-pM-zZK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2D-rS-GEm">
-                                <rect key="frame" x="87" y="192" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2D-rS-GEm">
+                                <rect key="frame" x="24" y="249" width="366" height="186"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ5-OX-Xgd">
+                                        <rect key="frame" x="0.0" y="83" width="366" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="9qI-Fr-ANS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="0.0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="Bjf-XY-Ojm"/>
+                                    <constraint firstItem="AJ5-OX-Xgd" firstAttribute="top" secondItem="N2D-rS-GEm" secondAttribute="top" constant="83" id="IFI-MO-ndR"/>
+                                    <constraint firstItem="AJ5-OX-Xgd" firstAttribute="leading" secondItem="N2D-rS-GEm" secondAttribute="leading" id="VHI-us-1mD"/>
+                                    <constraint firstAttribute="trailing" secondItem="AJ5-OX-Xgd" secondAttribute="trailing" id="nia-aq-k4J"/>
+                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlh-2e-dU0">
+                                <rect key="frame" x="186" y="455" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLx-7s-ax9">
+                                <rect key="frame" x="20" y="810" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Zuf-vA-gYr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="명언 생성하기"/>
+                                <connections>
+                                    <action selector="clickedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbU-dw-E8n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="USu-6g-Ffz" secondAttribute="trailing" constant="24" id="H5F-Rd-2av"/>
-                            <constraint firstItem="USu-6g-Ffz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Pby-Aj-Yc0"/>
-                            <constraint firstItem="USu-6g-Ffz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="uk5-0i-2IR"/>
+                            <constraint firstItem="qlh-2e-dU0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3kN-UT-neh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yLx-7s-ax9" secondAttribute="trailing" constant="20" id="7s2-pc-8ls"/>
+                            <constraint firstItem="N2D-rS-GEm" firstAttribute="top" secondItem="USu-6g-Ffz" secondAttribute="bottom" constant="160" id="8gW-Lr-Tcu"/>
+                            <constraint firstItem="N2D-rS-GEm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="LAe-PB-oZd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="USu-6g-Ffz" secondAttribute="trailing" constant="24" id="Va7-uf-zks"/>
+                            <constraint firstItem="yLx-7s-ax9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YoH-b5-0Qy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N2D-rS-GEm" secondAttribute="trailing" constant="24" id="apR-Kw-ft2"/>
+                            <constraint firstItem="qlh-2e-dU0" firstAttribute="top" secondItem="N2D-rS-GEm" secondAttribute="bottom" constant="20" id="kVn-LN-j7J"/>
+                            <constraint firstItem="USu-6g-Ffz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="oPy-cj-Odv"/>
+                            <constraint firstItem="yLx-7s-ax9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pcC-UK-WgC"/>
+                            <constraint firstItem="USu-6g-Ffz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="scB-U1-myb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="yLx-7s-ax9" id="bNg-S7-ep9"/>
+                        <outlet property="nameLabel" destination="qlh-2e-dU0" id="ot2-T4-tOp"/>
+                        <outlet property="textBox" destination="N2D-rS-GEm" id="vUu-ow-6NC"/>
+                        <outlet property="textLabel" destination="AJ5-OX-Xgd" id="z6Y-LR-2bG"/>
                         <outlet property="titleLabel" destination="USu-6g-Ffz" id="9x6-9V-lxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
